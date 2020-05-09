@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		EA570D6B246426D700AD0881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA570D6A246426D700AD0881 /* AppDelegate.swift */; };
 		EA570D6D246426D700AD0881 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA570D6C246426D700AD0881 /* SceneDelegate.swift */; };
-		EA570D6F246426D700AD0881 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA570D6E246426D700AD0881 /* ContentView.swift */; };
+		EA570D6F246426D700AD0881 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA570D6E246426D700AD0881 /* CoursesView.swift */; };
 		EA570D71246426D800AD0881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA570D70246426D800AD0881 /* Assets.xcassets */; };
 		EA570D74246426D800AD0881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA570D73246426D800AD0881 /* Preview Assets.xcassets */; };
 		EA570D77246426D800AD0881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA570D75246426D800AD0881 /* LaunchScreen.storyboard */; };
+		EA8283832466AF710035EAD6 /* TitleViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283822466AF710035EAD6 /* TitleViewComponent.swift */; };
+		EA8283852466AFF20035EAD6 /* BackCardViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283842466AFF20035EAD6 /* BackCardViewComponent.swift */; };
+		EA8283872466B01E0035EAD6 /* CardViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283862466B01E0035EAD6 /* CardViewComponent.swift */; };
+		EA8283892466B0830035EAD6 /* BottomCardViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283882466B0830035EAD6 /* BottomCardViewComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA570D67246426D700AD0881 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA570D6A246426D700AD0881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA570D6C246426D700AD0881 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA570D6E246426D700AD0881 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA570D6E246426D700AD0881 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		EA570D70246426D800AD0881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA570D73246426D800AD0881 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA570D76246426D800AD0881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA570D78246426D800AD0881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8283822466AF710035EAD6 /* TitleViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewComponent.swift; sourceTree = "<group>"; };
+		EA8283842466AFF20035EAD6 /* BackCardViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardViewComponent.swift; sourceTree = "<group>"; };
+		EA8283862466B01E0035EAD6 /* CardViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewComponent.swift; sourceTree = "<group>"; };
+		EA8283882466B0830035EAD6 /* BottomCardViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewComponent.swift; sourceTree = "<group>"; };
+		EAAA99292466EC570045CE23 /* DesignCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCode.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,10 @@
 		EA570D69246426D700AD0881 /* DesignCode */ = {
 			isa = PBXGroup;
 			children = (
+				EAAA99292466EC570045CE23 /* DesignCode.entitlements */,
 				EA570D6A246426D700AD0881 /* AppDelegate.swift */,
 				EA570D6C246426D700AD0881 /* SceneDelegate.swift */,
-				EA570D6E246426D700AD0881 /* ContentView.swift */,
+				EA8283812466AF3E0035EAD6 /* CoursesView */,
 				EA570D70246426D800AD0881 /* Assets.xcassets */,
 				EA570D75246426D800AD0881 /* LaunchScreen.storyboard */,
 				EA570D78246426D800AD0881 /* Info.plist */,
@@ -73,6 +83,18 @@
 				EA570D73246426D800AD0881 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA8283812466AF3E0035EAD6 /* CoursesView */ = {
+			isa = PBXGroup;
+			children = (
+				EA570D6E246426D700AD0881 /* CoursesView.swift */,
+				EA8283822466AF710035EAD6 /* TitleViewComponent.swift */,
+				EA8283842466AFF20035EAD6 /* BackCardViewComponent.swift */,
+				EA8283862466B01E0035EAD6 /* CardViewComponent.swift */,
+				EA8283882466B0830035EAD6 /* BottomCardViewComponent.swift */,
+			);
+			path = CoursesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA570D6B246426D700AD0881 /* AppDelegate.swift in Sources */,
+				EA8283892466B0830035EAD6 /* BottomCardViewComponent.swift in Sources */,
 				EA570D6D246426D700AD0881 /* SceneDelegate.swift in Sources */,
-				EA570D6F246426D700AD0881 /* ContentView.swift in Sources */,
+				EA570D6F246426D700AD0881 /* CoursesView.swift in Sources */,
+				EA8283852466AFF20035EAD6 /* BackCardViewComponent.swift in Sources */,
+				EA8283872466B01E0035EAD6 /* CardViewComponent.swift in Sources */,
+				EA8283832466AF710035EAD6 /* TitleViewComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
+				DEVELOPMENT_TEAM = GTDRBJB6PM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,8 +331,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DesignCode/DesignCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
+				DEVELOPMENT_TEAM = GTDRBJB6PM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
