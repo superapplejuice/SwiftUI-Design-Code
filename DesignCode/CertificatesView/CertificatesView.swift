@@ -8,49 +8,27 @@
 
 import SwiftUI
 
-class UserData: ObservableObject {
-    enum CourseProgress: String {
-        case Started
-        case InProgress = "In Progress"
-        case Completed
-    }
-
-    var name: String
-    var progress: CourseProgress
-
-    init(
-        name: String,
-        progress: CourseProgress
-    ) {
-        self.name = name
-        self.progress = progress
-    }
-}
-
-struct CoursesView: View {
+struct CertificatesView: View {
     @State private var show: Bool = false
     @State private var view: CGSize = .zero
     @State private var showCard: Bool = false
     @State private var bottomDrag: CGSize = .zero
     @State private var showFull: Bool = false
+    
+    @EnvironmentObject var userData: UserData
 
     let backCardWidth: CGFloat = 340
-
-    let userData: UserData = UserData(
-        name: "Jan Mathew",
-        progress: UserData.CourseProgress.InProgress
-    )
-
+    
     var body: some View {
         ZStack {
-            TitleView(
-                title: "Courses",
+            TitleComponent(
+                title: "Certificates",
                 image: "Background1",
                 blur: show ? 20 : 0,
                 showCard: $showCard
             )
 
-            BackCardView(
+            BackCardComponent(
                 offsetY: show ? -400 : -40,
                 scale: 0.9,
                 tilt: show ? 0 : 10,
@@ -63,7 +41,7 @@ struct CoursesView: View {
                 showCard: $showCard
             )
 
-            BackCardView(
+            BackCardComponent(
                 offsetY: show ? -200 : -20,
                 scale: 0.95,
                 tilt: show ? 0 : 5,
@@ -76,17 +54,17 @@ struct CoursesView: View {
                 showCard: $showCard
             )
 
-            CardView(
-                progress: userData.progress,
+            CardComponent(
+                progress: self.userData.progress,
                 // pass state down to view component
                 show: $show,
                 view: $view,
                 showCard: $showCard
             )
             
-            BottomCardView(
-                name: userData.name,
-                progress: userData.progress,
+            BottomCardComponent(
+                name: self.userData.name,
+                progress: self.userData.progress,
                 show: $show,
                 showCard: $showCard,
                 bottomDrag: $bottomDrag,
@@ -96,8 +74,8 @@ struct CoursesView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CertificatesView_Previews: PreviewProvider {
     static var previews: some View {
-        CoursesView()
+        CertificatesView().environmentObject(UserData())
     }
 }

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct CardComponent: View {
     // receive values from state
     @Binding var show: Bool
     @Binding var view: CGSize

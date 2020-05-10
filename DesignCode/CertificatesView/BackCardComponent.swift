@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct BackCardView: View {
+struct BackCardComponent: View {
     @Binding var view: CGSize
     @Binding var showCard: Bool
 
@@ -42,6 +42,7 @@ struct BackCardView: View {
         self.animation = animation
         self.showCardOffset = showCardOffset
         self.width = width
+        
         // manually set @State to @Binding
         _view = view
         _showCard = showCard

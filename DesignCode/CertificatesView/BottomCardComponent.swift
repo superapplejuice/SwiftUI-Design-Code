@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct BottomCardView: View {
+struct BottomCardComponent: View {
     @Binding var show: Bool
     @Binding var showCard: Bool
     @Binding var bottomDrag: CGSize

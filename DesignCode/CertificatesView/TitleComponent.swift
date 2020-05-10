@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TitleView: View {
+struct TitleComponent: View {
     @Binding var showCard: Bool
     
     var title: String = ""
@@ -24,6 +24,7 @@ struct TitleView: View {
         self.title = title
         self.image = image
         self.blur = blur
+        
         _showCard = showCard
     }
     
@@ -41,8 +42,8 @@ struct TitleView: View {
             Spacer()
         }
         .blur(radius: self.blur)
-        .opacity(showCard ? 0.4 : 1)
-        .offset(y: showCard ? -200 : 0)
+        .opacity(self.showCard ? 0.4 : 1)
+        .offset(y: self.showCard ? -200 : 0)
         .animation(
             Animation
                 .default

@@ -9,6 +9,24 @@
 import SwiftUI
 import UIKit
 
+class UserData: ObservableObject {
+    enum CourseProgress: String {
+        case Started
+        case InProgress = "In Progress"
+        case Completed
+    }
+
+    @Published var name: String
+    @Published var progress: CourseProgress
+    @Published var completion: Int
+
+    init() {
+        self.name = "Jan Mathew"
+        self.progress = .InProgress
+        self.completion = 42
+    }
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
@@ -18,7 +36,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = CoursesView()
+        let contentView = ContentView().environmentObject(UserData())
+        let _ = CertificatesView().environmentObject(UserData())
+        let _ = MenuView().environmentObject(UserData())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

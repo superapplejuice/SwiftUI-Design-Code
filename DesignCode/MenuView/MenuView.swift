@@ -1,0 +1,70 @@
+//
+//  MenuView.swift
+//  DesignCode
+//
+//  Created by Jan Mathew on 10/5/20.
+//  Copyright © 2020 Jan Mathew. All rights reserved.
+//
+
+import SwiftUI
+
+struct MenuView: View {
+    @EnvironmentObject var userData: UserData
+
+    var body: some View {
+        VStack {
+            Spacer()
+
+            VStack(spacing: 16) {
+                Text("\(self.userData.name) - \(self.userData.completion)% complete")
+                    .font(.caption)
+
+                // `Color` is also a View
+                Color.white
+                    .frame(
+                        width: CGFloat(self.userData.completion),
+                        height: 6
+                    )
+                    .cornerRadius(3)
+                    .frame(width: 130, height: 6, alignment: .leading)
+                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1))
+                    .cornerRadius(3)
+                    .padding()
+                    .frame(width: 150, height: 24)
+                    .background(Color.black.opacity(0.1))
+                    .cornerRadius(12)
+
+                MenuRowComponent("Account", "person.circle")
+                MenuRowComponent("Billing", "creditcard")
+                MenuRowComponent("Logout", "exclamationmark.circle")
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 300)
+            .background(LinearGradient(
+                gradient: Gradient(
+                    colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8705882353, green: 0.8941176471, blue: 0.9450980392, alpha: 1))]
+                ),
+                startPoint: .topLeading,
+                endPoint: .bottom
+            ))
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(
+                color: Color.black.opacity(0.3),
+                radius: 20,
+                x: 0,
+                y: 20
+            )
+            .padding(.horizontal, 30)
+            .overlay(
+                AvatarComponent(60, false)                    .offset(y: -150)
+            )
+        }
+        .padding(.bottom, 30)
+    }
+}
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        MenuView().environmentObject(UserData())
+    }
+}
