@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct MenuView: View {
+    @Binding var showMenu: Bool
+    @Binding var viewState: CGSize
+
     @EnvironmentObject var userData: UserData
 
     var body: some View {
@@ -56,15 +59,22 @@ struct MenuView: View {
             )
             .padding(.horizontal, 30)
             .overlay(
-                AvatarComponent(60, false)                    .offset(y: -150)
+                AvatarComponent(60, false).offset(y: -150)
             )
         }
         .padding(.bottom, 30)
-    }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView().environmentObject(UserData())
+        .background(Color.black.opacity(0.0001))
+        .offset(y: self.showMenu ? 0 : 1000)
+        .offset(y: self.viewState.height)
+        .animation(
+            .spring(
+                response: 0.5,
+                dampingFraction: 0.6,
+                blendDuration: 0
+            )
+        )
+        .onTapGesture {
+            self.showMenu.toggle()
+        }
     }
 }

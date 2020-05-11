@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showMenu: Bool = false
+    @State var viewState: CGSize = .zero
 
     @EnvironmentObject var userData: UserData
 
@@ -39,7 +40,8 @@ struct ContentView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .offset(y: self.showMenu ? -450 : 0)
             .rotation3DEffect(
-                Angle(degrees: self.showMenu ? -10 : 0),
+                Angle(degrees: self.showMenu ? Double(self.viewState.height / 10) - 10 : 0
+                ),
                 axis: (x: 10, y: 0, z: 0)
             )
             .scaleEffect(self.showMenu ? 0.9 : 1)
@@ -50,20 +52,24 @@ struct ContentView: View {
                     blendDuration: 0
                 )
             )
-
             .edgesIgnoringSafeArea(.all)
 
-            MenuView()
+            MenuView(showMenu: $showMenu, viewState: $viewState)
                 .environmentObject(UserData())
-                .offset(y: self.showMenu ? 0 : 600)
-                .animation(
-                    .spring(
-                        response: 0.5,
-                        dampingFraction: 0.6,
-                        blendDuration: 0
-                    )
-                )
         }
+        .gesture(
+            DragGesture()
+                .onChanged { value in
+                    self.viewState = value.translation
+                }
+                .onEnded { _ in
+                    if self.viewState.height > 50 {
+                        self.showMenu = false
+                    }
+
+                    self.viewState = .zero
+                }
+        )
     }
 }
 
