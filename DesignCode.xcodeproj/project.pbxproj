@@ -14,12 +14,14 @@
 		EA570D71246426D800AD0881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA570D70246426D800AD0881 /* Assets.xcassets */; };
 		EA570D74246426D800AD0881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA570D73246426D800AD0881 /* Preview Assets.xcassets */; };
 		EA570D77246426D800AD0881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA570D75246426D800AD0881 /* LaunchScreen.storyboard */; };
-		EA8283832466AF710035EAD6 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283822466AF710035EAD6 /* TitleComponent.swift */; };
-		EA8283852466AFF20035EAD6 /* BackCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283842466AFF20035EAD6 /* BackCardComponent.swift */; };
-		EA8283872466B01E0035EAD6 /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283862466B01E0035EAD6 /* CardComponent.swift */; };
-		EA8283892466B0830035EAD6 /* BottomCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283882466B0830035EAD6 /* BottomCardComponent.swift */; };
+		EA8283832466AF710035EAD6 /* CertTitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283822466AF710035EAD6 /* CertTitleComponent.swift */; };
+		EA8283852466AFF20035EAD6 /* CertBackCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283842466AFF20035EAD6 /* CertBackCardComponent.swift */; };
+		EA8283872466B01E0035EAD6 /* CertCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283862466B01E0035EAD6 /* CertCardComponent.swift */; };
+		EA8283892466B0830035EAD6 /* CertBottomCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283882466B0830035EAD6 /* CertBottomCardComponent.swift */; };
+		EA8E3A46246AD6500028EFF3 /* HomeContentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E3A45246AD6500028EFF3 /* HomeContentComponent.swift */; };
+		EA8E3A48246AE78B0028EFF3 /* HomeSectionCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E3A47246AE78B0028EFF3 /* HomeSectionCardComponent.swift */; };
 		EAB384292467F91400206299 /* MenuRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB384282467F91400206299 /* MenuRowComponent.swift */; };
-		EAB3842C2468147300206299 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842B2468147300206299 /* ContentView.swift */; };
+		EAB3842C2468147300206299 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842B2468147300206299 /* HomeView.swift */; };
 		EAB3842F2468165100206299 /* AvatarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842E2468165100206299 /* AvatarComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,13 +35,15 @@
 		EA570D73246426D800AD0881 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA570D76246426D800AD0881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA570D78246426D800AD0881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA8283822466AF710035EAD6 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
-		EA8283842466AFF20035EAD6 /* BackCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardComponent.swift; sourceTree = "<group>"; };
-		EA8283862466B01E0035EAD6 /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
-		EA8283882466B0830035EAD6 /* BottomCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardComponent.swift; sourceTree = "<group>"; };
+		EA8283822466AF710035EAD6 /* CertTitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertTitleComponent.swift; sourceTree = "<group>"; };
+		EA8283842466AFF20035EAD6 /* CertBackCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertBackCardComponent.swift; sourceTree = "<group>"; };
+		EA8283862466B01E0035EAD6 /* CertCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertCardComponent.swift; sourceTree = "<group>"; };
+		EA8283882466B0830035EAD6 /* CertBottomCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertBottomCardComponent.swift; sourceTree = "<group>"; };
+		EA8E3A45246AD6500028EFF3 /* HomeContentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentComponent.swift; sourceTree = "<group>"; };
+		EA8E3A47246AE78B0028EFF3 /* HomeSectionCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionCardComponent.swift; sourceTree = "<group>"; };
 		EAAA99292466EC570045CE23 /* DesignCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCode.entitlements; sourceTree = "<group>"; };
 		EAB384282467F91400206299 /* MenuRowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowComponent.swift; sourceTree = "<group>"; };
-		EAB3842B2468147300206299 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EAB3842B2468147300206299 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EAB3842E2468165100206299 /* AvatarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +93,7 @@
 				EA570D70246426D800AD0881 /* Assets.xcassets */,
 				EA8283812466AF3E0035EAD6 /* CertificatesView */,
 				EAB3842D2468162900206299 /* Components */,
-				EAB3842A2468146700206299 /* ContentView */,
+				EAB3842A2468146700206299 /* HomeVIew */,
 				EA570D75246426D800AD0881 /* LaunchScreen.storyboard */,
 				EA326BB72467B54E0030191A /* MenuView */,
 				EA570D72246426D800AD0881 /* Preview Content */,
@@ -109,20 +113,22 @@
 			isa = PBXGroup;
 			children = (
 				EA570D6E246426D700AD0881 /* CertificatesView.swift */,
-				EA8283822466AF710035EAD6 /* TitleComponent.swift */,
-				EA8283842466AFF20035EAD6 /* BackCardComponent.swift */,
-				EA8283862466B01E0035EAD6 /* CardComponent.swift */,
-				EA8283882466B0830035EAD6 /* BottomCardComponent.swift */,
+				EA8283822466AF710035EAD6 /* CertTitleComponent.swift */,
+				EA8283842466AFF20035EAD6 /* CertBackCardComponent.swift */,
+				EA8283862466B01E0035EAD6 /* CertCardComponent.swift */,
+				EA8283882466B0830035EAD6 /* CertBottomCardComponent.swift */,
 			);
 			path = CertificatesView;
 			sourceTree = "<group>";
 		};
-		EAB3842A2468146700206299 /* ContentView */ = {
+		EAB3842A2468146700206299 /* HomeVIew */ = {
 			isa = PBXGroup;
 			children = (
-				EAB3842B2468147300206299 /* ContentView.swift */,
+				EAB3842B2468147300206299 /* HomeView.swift */,
+				EA8E3A45246AD6500028EFF3 /* HomeContentComponent.swift */,
+				EA8E3A47246AE78B0028EFF3 /* HomeSectionCardComponent.swift */,
 			);
-			path = ContentView;
+			path = HomeVIew;
 			sourceTree = "<group>";
 		};
 		EAB3842D2468162900206299 /* Components */ = {
@@ -207,14 +213,16 @@
 				EA570D6B246426D700AD0881 /* AppDelegate.swift in Sources */,
 				EA326BB92467B55E0030191A /* MenuView.swift in Sources */,
 				EAB384292467F91400206299 /* MenuRowComponent.swift in Sources */,
-				EA8283892466B0830035EAD6 /* BottomCardComponent.swift in Sources */,
+				EA8E3A48246AE78B0028EFF3 /* HomeSectionCardComponent.swift in Sources */,
+				EA8283892466B0830035EAD6 /* CertBottomCardComponent.swift in Sources */,
 				EA570D6D246426D700AD0881 /* SceneDelegate.swift in Sources */,
 				EA570D6F246426D700AD0881 /* CertificatesView.swift in Sources */,
-				EA8283852466AFF20035EAD6 /* BackCardComponent.swift in Sources */,
+				EA8283852466AFF20035EAD6 /* CertBackCardComponent.swift in Sources */,
 				EAB3842F2468165100206299 /* AvatarComponent.swift in Sources */,
-				EAB3842C2468147300206299 /* ContentView.swift in Sources */,
-				EA8283872466B01E0035EAD6 /* CardComponent.swift in Sources */,
-				EA8283832466AF710035EAD6 /* TitleComponent.swift in Sources */,
+				EA8E3A46246AD6500028EFF3 /* HomeContentComponent.swift in Sources */,
+				EAB3842C2468147300206299 /* HomeView.swift in Sources */,
+				EA8283872466B01E0035EAD6 /* CertCardComponent.swift in Sources */,
+				EA8283832466AF710035EAD6 /* CertTitleComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
