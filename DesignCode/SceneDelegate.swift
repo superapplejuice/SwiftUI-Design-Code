@@ -27,6 +27,9 @@ class UserData: ObservableObject {
     }
 }
 
+// get current screen dimensions
+let currentScreen: CGRect = UIScreen.main.bounds
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
@@ -36,13 +39,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView().environmentObject(UserData())
+        let homeView = HomeView().environmentObject(UserData())
         let _ = CertificatesView().environmentObject(UserData())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: homeView)
             self.window = window
             window.makeKeyAndVisible()
         }
