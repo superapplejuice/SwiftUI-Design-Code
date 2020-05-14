@@ -12,11 +12,6 @@ struct AvatarComponent: View {
     var dimensions: CGFloat
     var renderOriginal: Bool
 
-    init(_ dimensions: CGFloat, _ renderOriginal: Bool) {
-        self.dimensions = dimensions
-        self.renderOriginal = renderOriginal
-    }
-
     var body: some View {
         Image("Avatar")
             .renderingMode(self.renderOriginal ? .original : nil)
