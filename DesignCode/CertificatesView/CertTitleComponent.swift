@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct TitleComponent: View {
+struct CertTitleComponent: View {
     @Binding var showCard: Bool
-    
-    var title: String = ""
-    var image: String = ""
-    var blur: CGFloat = 20
+
+    var title: String
+    var image: String
+    var blur: CGFloat
     
     init(
         title: String,
@@ -24,10 +24,10 @@ struct TitleComponent: View {
         self.title = title
         self.image = image
         self.blur = blur
-        
+
         _showCard = showCard
     }
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -37,7 +37,7 @@ struct TitleComponent: View {
                 Spacer()
             }
             .padding()
-            
+
             Image(self.image)
             Spacer()
         }

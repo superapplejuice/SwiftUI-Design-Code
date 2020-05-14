@@ -14,55 +14,54 @@ struct CertificatesView: View {
     @State private var showCard: Bool = false
     @State private var bottomDrag: CGSize = .zero
     @State private var showFull: Bool = false
-    
+
     @EnvironmentObject var userData: UserData
 
     let backCardWidth: CGFloat = 340
-    
+
     var body: some View {
         ZStack {
-            TitleComponent(
+            CertTitleComponent(
                 title: "Certificates",
                 image: "Background1",
-                blur: show ? 20 : 0,
+                blur: self.show ? 20 : 0,
                 showCard: $showCard
             )
 
-            BackCardComponent(
-                offsetY: show ? -400 : -40,
+            CertBackCardComponent(
+                offsetY: self.show ? -400 : -40,
                 scale: 0.9,
-                tilt: show ? 0 : 10,
-                rotation: 10,
+                tilt: self.show ? 0 : 10,
                 bgColor: Color("card4"),
                 animation: 0.4,
+                rotation: 10,
                 showCardOffset: -180,
                 width: showCard ? 300 : backCardWidth,
                 view: $view,
                 showCard: $showCard
             )
 
-            BackCardComponent(
-                offsetY: show ? -200 : -20,
+            CertBackCardComponent(
+                offsetY: self.show ? -200 : -20,
                 scale: 0.95,
-                tilt: show ? 0 : 5,
-                rotation: 5,
+                tilt: self.show ? 0 : 5,
                 bgColor: Color("card3"),
                 animation: 0.25,
+                rotation: 5,
                 showCardOffset: -140,
                 width: backCardWidth,
                 view: $view,
                 showCard: $showCard
             )
 
-            CardComponent(
+            CertCardComponent(
                 progress: self.userData.progress,
-                // pass state down to view component
                 show: $show,
                 view: $view,
                 showCard: $showCard
             )
-            
-            BottomCardComponent(
+
+            CertBottomCardComponent(
                 name: self.userData.name,
                 progress: self.userData.progress,
                 show: $show,

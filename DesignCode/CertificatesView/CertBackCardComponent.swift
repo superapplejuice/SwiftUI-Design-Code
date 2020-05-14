@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct BackCardComponent: View {
+struct CertBackCardComponent: View {
     @Binding var view: CGSize
     @Binding var showCard: Bool
 
@@ -20,30 +20,28 @@ struct BackCardComponent: View {
     var rotation: Double = 0
     var showCardOffset: CGFloat = 0
     var width: CGFloat = 0
-
+    
     init(
         offsetY: CGFloat,
-        scale: CGFloat = 1,
+        scale: CGFloat,
         tilt: Double,
-        rotation: Double,
         bgColor: Color,
         animation: Double,
+        rotation: Double,
         showCardOffset: CGFloat,
         width: CGFloat,
-        // include @Binding in init
         view: Binding<CGSize>,
         showCard: Binding<Bool>
     ) {
         self.offsetY = offsetY
         self.scale = scale
         self.tilt = tilt
-        self.rotation = rotation
         self.bgColor = bgColor
         self.animation = animation
+        self.rotation = rotation
         self.showCardOffset = showCardOffset
         self.width = width
-        
-        // manually set @State to @Binding
+
         _view = view
         _showCard = showCard
     }

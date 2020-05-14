@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct CardComponent: View {
+struct CertCardComponent: View {
     // receive values from state
     @Binding var show: Bool
     @Binding var view: CGSize
     @Binding var showCard: Bool
-    
+
     var progress: UserData.CourseProgress
     
     init(
@@ -23,12 +23,12 @@ struct CardComponent: View {
         showCard: Binding<Bool>
     ) {
         self.progress = progress
-        
+
         _show = show
         _view = view
         _showCard = showCard
     }
-    
+
     var body: some View {
         VStack {
             HStack {

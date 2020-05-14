@@ -8,26 +8,15 @@
 
 import SwiftUI
 
-struct BottomCardComponent: View {
+struct CertBottomCardComponent: View {
     @Binding var show: Bool
     @Binding var showCard: Bool
     @Binding var bottomDrag: CGSize
     @Binding var showFull: Bool
-    
+
     var name: String
     var progress: UserData.CourseProgress
     
-    func setBodyText(_ progress: UserData.CourseProgress) -> String {
-        switch progress {
-        case .Started:
-            return "This card is proof that \(name) has officially purchased the course from Design+Code."
-        case .InProgress:
-            return "This card is proof that \(name) is being taught the above course by a Design+Code instructor."
-        case .Completed:
-            return "This card is proof that \(name) has completed the above course with approval from a Design+Code instructor."
-        }
-    }
-
     init(
         name: String,
         progress: UserData.CourseProgress,
@@ -38,11 +27,21 @@ struct BottomCardComponent: View {
     ) {
         self.name = name
         self.progress = progress
-        
         _show = show
         _showCard = showCard
         _bottomDrag = bottomDrag
         _showFull = showFull
+    }
+
+    func setBodyText(_ progress: UserData.CourseProgress) -> String {
+        switch progress {
+        case .Started:
+            return "This card is proof that \(name) has officially purchased the course from Design+Code."
+        case .InProgress:
+            return "This card is proof that \(name) is being taught the above course by a Design+Code instructor."
+        case .Completed:
+            return "This card is proof that \(name) has completed the above course with approval from a Design+Code instructor."
+        }
     }
     
     var body: some View {
