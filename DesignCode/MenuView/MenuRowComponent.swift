@@ -12,11 +12,6 @@ struct MenuRowComponent: View {
     var title: String
     var icon: String
 
-    init(_ title: String, _ icon: String) {
-        self.title = title
-        self.icon = icon
-    }
-
     var body: some View {
         HStack(spacing: 16) {
             Image(systemName: self.icon)

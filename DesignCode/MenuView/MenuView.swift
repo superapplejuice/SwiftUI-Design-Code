@@ -37,9 +37,18 @@ struct MenuView: View {
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(12)
 
-                MenuRowComponent("Account", "person.circle")
-                MenuRowComponent("Billing", "creditcard")
-                MenuRowComponent("Logout", "exclamationmark.circle")
+                MenuRowComponent(
+                    title: "Account",
+                    icon: "person.circle"
+                )
+                MenuRowComponent(
+                    title: "Billing",
+                    icon: "creditcard"
+                )
+                MenuRowComponent(
+                    title: "Logout",
+                    icon: "exclamationmark.circle"
+                )
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
@@ -59,12 +68,15 @@ struct MenuView: View {
             )
             .padding(.horizontal, 30)
             .overlay(
-                AvatarComponent(60, false).offset(y: -150)
+                AvatarComponent(
+                    dimensions: 60,
+                    renderOriginal: false
+                ).offset(y: -150)
             )
         }
         .padding(.bottom, 30)
         .background(Color.black.opacity(0.0001))
-        .offset(y: self.showMenu ? 0 : 1000)
+        .offset(y: self.showMenu ? 0 : currentScreen.height)
         .offset(y: self.viewState.height)
         .animation(
             .spring(
