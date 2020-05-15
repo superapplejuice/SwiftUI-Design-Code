@@ -79,9 +79,3 @@ struct HomeContentComponent: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
-
-struct HomeContentComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeContentComponent(showMenu: .constant(false), viewState: .constant(.zero))
-    }
-}

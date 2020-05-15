@@ -80,9 +80,3 @@ struct UpdatesList: View {
         }
     }
 }
-
-struct UpdatesList_Previews: PreviewProvider {
-    static var previews: some View {
-        UpdatesList()
-    }
-}
