@@ -42,6 +42,8 @@ let sectionData: [SectionData] = [
 ]
 
 struct HomeContentComponent: View {
+    @State private var showUpdate: Bool = false
+
     @Binding var showMenu: Bool
     @Binding var viewState: CGSize
 
@@ -54,6 +56,22 @@ struct HomeContentComponent: View {
 
                 Button(action: { self.showMenu.toggle() }) {
                     AvatarComponent(dimensions: 36, renderOriginal: true)
+                }
+
+                Button(action: { self.showUpdate.toggle() }) {
+                    Image(systemName: "bell")
+                        .renderingMode(.original)
+                        .font(.system(size: 16, weight: .medium))
+                        .frame(width: 36, height: 36)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                }
+                // display modal
+                .sheet(isPresented: $showUpdate) {
+                    // code to show in the modal
+                    CertificatesView().environmentObject(UserData())
                 }
             }
             .padding(.horizontal, 30)

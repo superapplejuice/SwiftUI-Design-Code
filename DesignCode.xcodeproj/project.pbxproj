@@ -23,6 +23,7 @@
 		EAB384292467F91400206299 /* MenuRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB384282467F91400206299 /* MenuRowComponent.swift */; };
 		EAB3842C2468147300206299 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842B2468147300206299 /* HomeView.swift */; };
 		EAB3842F2468165100206299 /* AvatarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842E2468165100206299 /* AvatarComponent.swift */; };
+		EACF564C246D916300220201 /* UpdatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF564B246D916300220201 /* UpdatesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		EAB384282467F91400206299 /* MenuRowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowComponent.swift; sourceTree = "<group>"; };
 		EAB3842B2468147300206299 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EAB3842E2468165100206299 /* AvatarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarComponent.swift; sourceTree = "<group>"; };
+		EACF564B246D916300220201 /* UpdatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		EA570D69246426D700AD0881 /* DesignCode */ = {
 			isa = PBXGroup;
 			children = (
+				EACF564A246D914900220201 /* UpdatesList */,
 				EAAA99292466EC570045CE23 /* DesignCode.entitlements */,
 				EA570D78246426D800AD0881 /* Info.plist */,
 				EA570D6A246426D700AD0881 /* AppDelegate.swift */,
@@ -137,6 +140,14 @@
 				EAB3842E2468165100206299 /* AvatarComponent.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EACF564A246D914900220201 /* UpdatesList */ = {
+			isa = PBXGroup;
+			children = (
+				EACF564B246D916300220201 /* UpdatesList.swift */,
+			);
+			path = UpdatesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACF564C246D916300220201 /* UpdatesList.swift in Sources */,
 				EA570D6B246426D700AD0881 /* AppDelegate.swift in Sources */,
 				EA326BB92467B55E0030191A /* MenuView.swift in Sources */,
 				EAB384292467F91400206299 /* MenuRowComponent.swift in Sources */,
