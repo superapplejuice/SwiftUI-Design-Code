@@ -14,19 +14,6 @@ struct CertTitleComponent: View {
     var title: String
     var image: String
     var blur: CGFloat
-    
-    init(
-        title: String,
-        image: String,
-        blur: CGFloat,
-        showCard: Binding<Bool>
-    ) {
-        self.title = title
-        self.image = image
-        self.blur = blur
-
-        _showCard = showCard
-    }
 
     var body: some View {
         VStack {

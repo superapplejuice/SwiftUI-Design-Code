@@ -16,22 +16,6 @@ struct CertBottomCardComponent: View {
 
     var name: String
     var progress: UserData.CourseProgress
-    
-    init(
-        name: String,
-        progress: UserData.CourseProgress,
-        show: Binding<Bool>,
-        showCard: Binding<Bool>,
-        bottomDrag: Binding<CGSize>,
-        showFull: Binding<Bool>
-    ) {
-        self.name = name
-        self.progress = progress
-        _show = show
-        _showCard = showCard
-        _bottomDrag = bottomDrag
-        _showFull = showFull
-    }
 
     func setBodyText(_ progress: UserData.CourseProgress) -> String {
         switch progress {

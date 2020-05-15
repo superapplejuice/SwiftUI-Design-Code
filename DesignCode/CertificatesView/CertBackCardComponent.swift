@@ -20,31 +20,6 @@ struct CertBackCardComponent: View {
     var rotation: Double = 0
     var showCardOffset: CGFloat = 0
     var width: CGFloat = 0
-    
-    init(
-        offsetY: CGFloat,
-        scale: CGFloat,
-        tilt: Double,
-        bgColor: Color,
-        animation: Double,
-        rotation: Double,
-        showCardOffset: CGFloat,
-        width: CGFloat,
-        view: Binding<CGSize>,
-        showCard: Binding<Bool>
-    ) {
-        self.offsetY = offsetY
-        self.scale = scale
-        self.tilt = tilt
-        self.bgColor = bgColor
-        self.animation = animation
-        self.rotation = rotation
-        self.showCardOffset = showCardOffset
-        self.width = width
-
-        _view = view
-        _showCard = showCard
-    }
 
     var body: some View {
         VStack {

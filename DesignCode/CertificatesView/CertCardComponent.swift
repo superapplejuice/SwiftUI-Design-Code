@@ -15,19 +15,6 @@ struct CertCardComponent: View {
     @Binding var showCard: Bool
 
     var progress: UserData.CourseProgress
-    
-    init(
-        progress: UserData.CourseProgress,
-        show: Binding<Bool>,
-        view: Binding<CGSize>,
-        showCard: Binding<Bool>
-    ) {
-        self.progress = progress
-
-        _show = show
-        _view = view
-        _showCard = showCard
-    }
 
     var body: some View {
         VStack {
