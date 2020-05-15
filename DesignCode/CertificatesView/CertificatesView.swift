@@ -72,9 +72,3 @@ struct CertificatesView: View {
         }
     }
 }
-
-struct CertificatesView_Previews: PreviewProvider {
-    static var previews: some View {
-        CertificatesView().environmentObject(UserData())
-    }
-}
