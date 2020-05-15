@@ -49,57 +49,12 @@ struct HomeContentComponent: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Text("Watching").font(.system(size: 28, weight: .bold))
+            HomeTitleBarComponent(
+                showUpdate: $showUpdate,
+                showMenu: $showMenu
+            )
 
-                Spacer()
-
-                Button(action: { self.showMenu.toggle() }) {
-                    AvatarComponent(dimensions: 36, renderOriginal: true)
-                }
-
-                Button(action: { self.showUpdate.toggle() }) {
-                    Image(systemName: "bell")
-                        .renderingMode(.original)
-                        .font(.system(size: 16, weight: .medium))
-                        .frame(width: 36, height: 36)
-                        .background(Color.white)
-                        .clipShape(Circle())
-                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
-                }
-                // display modal
-                .sheet(isPresented: $showUpdate) {
-                    // View to render in the modal
-                    UpdatesList()
-                }
-            }
-            .padding(.horizontal, 30)
-            .padding(.top, 30)
-
-            // horizontal scrolling
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 30) {
-                    ForEach(sectionData) { item in
-                        /*
-                         gives dimension info
-                         e.g. width, height, corner positions, etc.
-                         */
-                        GeometryReader { geometry in
-                            HomeSectionCardComponent(sectionData: item)
-                                .rotation3DEffect(
-                                    Angle(degrees:
-                                        Double(geometry.frame(in: .global).minX - 30)
-                                    ) / -25,
-                                    axis: (x: 0, y: 10, z: 0)
-                                )
-                        }
-                        .frame(width: 275, height: 257)
-                    }
-                }
-                .padding(30)
-                .padding(.bottom, 30)
-            }
+            HomeSectionComponent()
 
             Spacer()
         }
