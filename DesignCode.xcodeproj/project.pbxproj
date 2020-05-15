@@ -20,6 +20,8 @@
 		EA8283892466B0830035EAD6 /* CertBottomCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8283882466B0830035EAD6 /* CertBottomCardComponent.swift */; };
 		EA8E3A46246AD6500028EFF3 /* HomeContentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E3A45246AD6500028EFF3 /* HomeContentComponent.swift */; };
 		EA8E3A48246AE78B0028EFF3 /* HomeSectionCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E3A47246AE78B0028EFF3 /* HomeSectionCardComponent.swift */; };
+		EA90F5B3246EBF0A00EE2248 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90F5B2246EBF0A00EE2248 /* UpdateDetail.swift */; };
+		EA90F5B5246EC72C00EE2248 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA90F5B4246EC72C00EE2248 /* UpdateStore.swift */; };
 		EAB384292467F91400206299 /* MenuRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB384282467F91400206299 /* MenuRowComponent.swift */; };
 		EAB3842C2468147300206299 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842B2468147300206299 /* HomeView.swift */; };
 		EAB3842F2468165100206299 /* AvatarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3842E2468165100206299 /* AvatarComponent.swift */; };
@@ -42,6 +44,8 @@
 		EA8283882466B0830035EAD6 /* CertBottomCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertBottomCardComponent.swift; sourceTree = "<group>"; };
 		EA8E3A45246AD6500028EFF3 /* HomeContentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentComponent.swift; sourceTree = "<group>"; };
 		EA8E3A47246AE78B0028EFF3 /* HomeSectionCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionCardComponent.swift; sourceTree = "<group>"; };
+		EA90F5B2246EBF0A00EE2248 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		EA90F5B4246EC72C00EE2248 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		EAAA99292466EC570045CE23 /* DesignCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DesignCode.entitlements; sourceTree = "<group>"; };
 		EAB384282467F91400206299 /* MenuRowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowComponent.swift; sourceTree = "<group>"; };
 		EAB3842B2468147300206299 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				EACF564B246D916300220201 /* UpdatesList.swift */,
+				EA90F5B2246EBF0A00EE2248 /* UpdateDetail.swift */,
+				EA90F5B4246EC72C00EE2248 /* UpdateStore.swift */,
 			);
 			path = UpdatesList;
 			sourceTree = "<group>";
@@ -229,9 +235,11 @@
 				EA8283892466B0830035EAD6 /* CertBottomCardComponent.swift in Sources */,
 				EA570D6D246426D700AD0881 /* SceneDelegate.swift in Sources */,
 				EA570D6F246426D700AD0881 /* CertificatesView.swift in Sources */,
+				EA90F5B3246EBF0A00EE2248 /* UpdateDetail.swift in Sources */,
 				EA8283852466AFF20035EAD6 /* CertBackCardComponent.swift in Sources */,
 				EAB3842F2468165100206299 /* AvatarComponent.swift in Sources */,
 				EA8E3A46246AD6500028EFF3 /* HomeContentComponent.swift in Sources */,
+				EA90F5B5246EC72C00EE2248 /* UpdateStore.swift in Sources */,
 				EAB3842C2468147300206299 /* HomeView.swift in Sources */,
 				EA8283872466B01E0035EAD6 /* CertCardComponent.swift in Sources */,
 				EA8283832466AF710035EAD6 /* CertTitleComponent.swift in Sources */,

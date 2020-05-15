@@ -70,8 +70,8 @@ struct HomeContentComponent: View {
                 }
                 // display modal
                 .sheet(isPresented: $showUpdate) {
-                    // code to show in the modal
-                    CertificatesView().environmentObject(UserData())
+                    // View to render in the modal
+                    UpdatesList()
                 }
             }
             .padding(.horizontal, 30)
