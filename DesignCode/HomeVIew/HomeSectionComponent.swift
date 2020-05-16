@@ -21,11 +21,15 @@ struct HomeSectionComponent: View {
                     GeometryReader { geometry in
                         HomeSectionCardComponent(sectionData: item)
                             .rotation3DEffect(
-                                Angle(degrees:
-                                    Double(geometry.frame(in: .global).minX - 30)
-                                    ) / -25,
+                                Angle(
+                                    degrees:
+                                        Double(
+                                            geometry.frame(in: .global).minX
+                                                - 30
+                                        )
+                                ) / -25,
                                 axis: (x: 0, y: 10, z: 0)
-                        )
+                            )
                     }
                     .frame(width: 275, height: 257)
                 }

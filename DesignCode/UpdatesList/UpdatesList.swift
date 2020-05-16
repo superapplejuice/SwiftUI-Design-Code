@@ -27,7 +27,8 @@ struct UpdatesList: View {
             List {
                 ForEach(updateStore.updateList) { item in
                     // destination sets the View to render
-                    NavigationLink(destination: UpdateDetail(updateItem: item)) {
+                    NavigationLink(destination: UpdateDetail(updateItem: item))
+                    {
                         HStack {
                             Image(item.icon)
                                 .resizable()
@@ -45,7 +46,16 @@ struct UpdatesList: View {
                                 Text(item.content)
                                     .lineLimit(2)
                                     .font(.subheadline)
-                                    .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                                    .foregroundColor(
+                                        Color(
+                                            #colorLiteral(
+                                                red: 0.2549019754,
+                                                green: 0.2745098174,
+                                                blue: 0.3019607961,
+                                                alpha: 1
+                                            )
+                                        )
+                                    )
 
                                 Text(item.date)
                                     .font(.caption)

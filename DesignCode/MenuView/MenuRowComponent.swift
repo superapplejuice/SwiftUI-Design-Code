@@ -18,7 +18,16 @@ struct MenuRowComponent: View {
                 .font(.system(size: 20, weight: .medium))
                 .imageScale(.large)
                 .frame(width: 32, height: 32)
-                .foregroundColor(Color(#colorLiteral(red: 0.662745098, green: 0.7333333333, blue: 0.831372549, alpha: 1)))
+                .foregroundColor(
+                    Color(
+                        #colorLiteral(
+                            red: 0.662745098,
+                            green: 0.7333333333,
+                            blue: 0.831372549,
+                            alpha: 1
+                        )
+                    )
+                )
 
             Text(self.title)
                 .font(.system(size: 20, weight: .bold))

@@ -38,7 +38,7 @@ let sectionData: [SectionData] = [
         sectionText: "20 Sections",
         backgroundImage: Image(uiImage: #imageLiteral(resourceName: "Card5")),
         backgroundColor: Color("card3")
-    )
+    ),
 ]
 
 struct HomeContentComponent: View {
@@ -64,7 +64,9 @@ struct HomeContentComponent: View {
         .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
         .offset(y: self.showMenu ? -450 : 0)
         .rotation3DEffect(
-            Angle(degrees: self.showMenu ? Double(self.viewState.height / 10) - 10 : 0
+            Angle(
+                degrees: self.showMenu
+                    ? Double(self.viewState.height / 10) - 10 : 0
             ),
             axis: (x: 10, y: 0, z: 0)
         )

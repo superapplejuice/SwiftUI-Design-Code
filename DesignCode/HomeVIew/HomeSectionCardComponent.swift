@@ -36,6 +36,10 @@ struct HomeSectionCardComponent: View {
         .frame(width: 275, height: 275)
         .background(self.sectionData.backgroundColor)
         .cornerRadius(30)
-        .shadow(color: self.sectionData.backgroundColor.opacity(0.5), radius: 20, y: 10)
+        .shadow(
+            color: self.sectionData.backgroundColor.opacity(0.5),
+            radius: 20,
+            y: 10
+        )
     }
 }

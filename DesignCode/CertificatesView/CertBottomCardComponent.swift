@@ -20,14 +20,17 @@ struct CertBottomCardComponent: View {
     func setBodyText(_ progress: UserData.CourseProgress) -> String {
         switch progress {
         case .Started:
-            return "This card is proof that \(name) has officially purchased the course from Design+Code."
+            return
+                "This card is proof that \(name) has officially purchased the course from Design+Code."
         case .InProgress:
-            return "This card is proof that \(name) is being taught the above course by a Design+Code instructor."
+            return
+                "This card is proof that \(name) is being taught the above course by a Design+Code instructor."
         case .Completed:
-            return "This card is proof that \(name) has completed the above course with approval from a Design+Code instructor."
+            return
+                "This card is proof that \(name) has completed the above course with approval from a Design+Code instructor."
         }
     }
-    
+
     var body: some View {
         // set spacing between each element in the stack
         VStack(spacing: 20) {
@@ -35,12 +38,12 @@ struct CertBottomCardComponent: View {
                 .frame(width: 40, height: 6)
                 .cornerRadius(3)
                 .opacity(0.1)
-            
+
             Text(self.setBodyText(self.progress))
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
                 .lineSpacing(4)
-            
+
             Spacer()
         }
         .padding(.top, 8)
@@ -54,39 +57,41 @@ struct CertBottomCardComponent: View {
         .blur(radius: show ? 20 : 0)
         .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
         .gesture(
-            DragGesture().onChanged { value in
-                self.bottomDrag = value.translation
-                
-                if self.showFull {
-                    self.bottomDrag.height += -300
+            DragGesture()
+                .onChanged { value in
+                    self.bottomDrag = value.translation
+
+                    if self.showFull {
+                        self.bottomDrag.height += -300
+                    }
+
+                    // prevent user from dragging the card too high
+                    if self.bottomDrag.height <= -300 {
+                        self.bottomDrag.height = -300
+                    }
                 }
-                
-                // prevent user from dragging the card too high
-                if self.bottomDrag.height <= -300 {
-                    self.bottomDrag.height = -300
+                .onEnded { _ in
+                    // close bottom card if drag position is low
+                    if self.bottomDrag.height >= 50 {
+                        self.showCard = false
+                    }
+
+                    // show full bottom card display
+                    if (
+                        // perform if NOT showFull & dragged to high position
+                        self.bottomDrag.height <= -110 && !self.showFull)
+                        || (
+                            // perform if IS showFull & drag position higher than -250
+                            self.bottomDrag.height <= -250 && self.showFull)
+                    {
+                        self.bottomDrag.height = -300
+                        self.showFull = true
+                    }
+                    else {
+                        self.bottomDrag = .zero
+                        self.showFull = false
+                    }
                 }
-            }
-            .onEnded { _ in
-                // close bottom card if drag position is low
-                if self.bottomDrag.height >= 50 {
-                    self.showCard = false
-                }
-                
-                // show full bottom card display
-                if (
-                    // perform if NOT showFull & dragged to high position
-                    self.bottomDrag.height <= -110 && !self.showFull
-                ) || (
-                    // perform if IS showFull & drag position higher than -250
-                    self.bottomDrag.height <= -250 && self.showFull
-                ) {
-                    self.bottomDrag.height = -300
-                    self.showFull = true
-                } else {
-                    self.bottomDrag = .zero
-                    self.showFull = false
-                }
-            }
         )
     }
 }

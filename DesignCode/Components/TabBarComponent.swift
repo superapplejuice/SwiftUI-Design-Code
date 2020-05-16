@@ -12,11 +12,12 @@ struct TabBarComponent: View {
     var body: some View {
         // bottom navigation bar
         TabView {
-            HomeView().tabItem {
-                Image(systemName: "play.circle.fill")
+            HomeView()
+                .tabItem {
+                    Image(systemName: "play.circle.fill")
 
-                Text("Home")
-            }
+                    Text("Home")
+                }
 
             CertificatesView()
                 .environmentObject(UserData())
@@ -31,6 +32,6 @@ struct TabBarComponent: View {
 
 struct TabBarComponent_Previews: PreviewProvider {
     static var previews: some View {
-            TabBarComponent()
+        TabBarComponent()
     }
 }

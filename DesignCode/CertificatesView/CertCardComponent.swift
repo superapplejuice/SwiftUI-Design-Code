@@ -30,7 +30,7 @@ struct CertCardComponent: View {
                 Image("Logo1")
             }
             .padding()
-            
+
             Spacer()
             Image("Card1")
                 .resizable()
@@ -54,21 +54,25 @@ struct CertCardComponent: View {
          dampingFraction: resistance
          blendDuration: transitions between response and dampingFraction
          */
-        .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
+        .animation(
+            .spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0)
+        )
         .onTapGesture {
             self.showCard.toggle()
         }
         .gesture(
-            showCard ? nil : DragGesture()
-                .onChanged { value in
-                    // set drag values to @State
-                    self.view = value.translation
-                    self.show = true
-                }
-                .onEnded { _ in
-                    self.view = .zero
-                    self.show = false
-                }
+            showCard
+                ? nil
+                : DragGesture()
+                    .onChanged { value in
+                        // set drag values to @State
+                        self.view = value.translation
+                        self.show = true
+                    }
+                    .onEnded { _ in
+                        self.view = .zero
+                        self.show = false
+                    }
         )
     }
 }

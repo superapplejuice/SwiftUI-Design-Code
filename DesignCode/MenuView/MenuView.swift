@@ -19,8 +19,10 @@ struct MenuView: View {
             Spacer()
 
             VStack(spacing: 16) {
-                Text("\(self.userData.name) - \(self.userData.completion)% complete")
-                    .font(.caption)
+                Text(
+                    "\(self.userData.name) - \(self.userData.completion)% complete"
+                )
+                .font(.caption)
 
                 // `Color` is also a View
                 Color.white
@@ -30,7 +32,12 @@ struct MenuView: View {
                     )
                     .cornerRadius(3)
                     .frame(width: 130, height: 6, alignment: .leading)
-                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1))
+                    .background(
+                        Color(
+                            #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                        )
+                        .opacity(0.1)
+                    )
                     .cornerRadius(3)
                     .padding()
                     .frame(width: 150, height: 24)
@@ -52,13 +59,32 @@ struct MenuView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
-            .background(LinearGradient(
-                gradient: Gradient(
-                    colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8705882353, green: 0.8941176471, blue: 0.9450980392, alpha: 1))]
-                ),
-                startPoint: .topLeading,
-                endPoint: .bottom
-            ))
+            .background(
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [
+                            Color(
+                                #colorLiteral(
+                                    red: 1.0,
+                                    green: 1.0,
+                                    blue: 1.0,
+                                    alpha: 1.0
+                                )
+                            ),
+                            Color(
+                                #colorLiteral(
+                                    red: 0.8705882353,
+                                    green: 0.8941176471,
+                                    blue: 0.9450980392,
+                                    alpha: 1
+                                )
+                            ),
+                        ]
+                    ),
+                    startPoint: .topLeading,
+                    endPoint: .bottom
+                )
+            )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(
                 color: Color.black.opacity(0.3),
@@ -71,7 +97,8 @@ struct MenuView: View {
                 AvatarComponent(
                     dimensions: 60,
                     renderOriginal: false
-                ).offset(y: -150)
+                )
+                .offset(y: -150)
             )
         }
         .padding(.bottom, 30)

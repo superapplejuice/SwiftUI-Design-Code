@@ -10,7 +10,8 @@
     "cz-conventional-changelog": "3.2.0"
   },
   "scripts": {
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "format": "sh format.sh"
   },
   "config": {
     "commitizen": {
